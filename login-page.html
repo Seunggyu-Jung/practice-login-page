@@ -4,38 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pr-login</title>
+    <title>login_pr</title>
     <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./login.css   ">
 </head>
 <body>
-    <header>
-        <div class="header-wrap">
-           <a href="#"><img src="./form.svg" alt=""></a>
-           <a href="#" class="join"> 회원가입</a>
-        </div>
-    </header>
-
-    <main>
-        <div class="main-wraper">
-
-                <h1>
-                <img src="./form.svg" alt="">
-                <p class="title"><strong>로그인</strong></p>
-                </h1>
-
-            <form class="login">
-                <label for="user-email">이메일</label>
-                <input id="user-email" type="email">
-                <label for="user-pw">비밀번호</label>
-                <input id="user-pw" type="password">
+    <div class="l_wrap">
+        <header class="login-top">
+            <img src="./form.svg" alt="diary's top logo">
+            <a class="join-link" href="#">회원가입</a>
+        </header>
+        <main class="login-middle">
+            <div class="middle-logo">
+                <img src="./form.svg" alt="diary's middle & main logo">
+                <strong>로그인</strong>
+            </div>
+            
+            <form class="login-form">
+                <label for="log-email">이메일</label>
+                <input id="log-email" type="email">
+                <label for="log-pw">비밀번호</label>
+                <input id="log-pw" type="password">
                 <button type="submit">로그인</button>
             </form>
-            
-        </div>
-
-    </main>
-    <footer> <p>Copyright 2023. WENIV All rights reserved.</p></footer>
-    
+        </main>
+        <footer>
+            <span>
+                Copyright 2023. WENIV All rights reserved.
+            </span>
+        </footer>
+    </div>
 </body>
 </html>
