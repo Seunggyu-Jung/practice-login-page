@@ -36,7 +36,6 @@ form {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    width: 416px;
     gap:16px;
 }
 
@@ -54,6 +53,7 @@ form input {
 }
 
 form textarea {
+    width: 416px;
     height: 360px;
     border: 1px solid #677880;
     border-radius: 4px;
@@ -68,7 +68,7 @@ form button {
 }
 
 .line {
-    height: calc(100vh - 120px);
+    height: 100vh;
     border: 1px solid #FF4F6E;
 }
 
