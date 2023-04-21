@@ -1,3 +1,5 @@
+
+
 .top-banner {
     float: right;
     margin-top: 28px;
@@ -29,7 +31,12 @@
 .middle-wrap {
     display: flex;
     gap: 30px;
+}
 
+.line {
+    width: 2px;
+    height: 100vh;
+    border: 1px solid #FF4F6E;
 }
 
 form {
@@ -53,10 +60,14 @@ form input {
 }
 
 form textarea {
-    width: 416px;
+    display: block;
+    width: 456px;
     height: 360px;
-    border: 1px solid #677880;
-    border-radius: 4px;
+    resize: none;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
 }
 
 form button {
@@ -67,10 +78,7 @@ form button {
     border-radius: 4px;
 }
 
-.line {
-    height: 100vh;
-    border: 1px solid #FF4F6E;
-}
+
 
 
 .boxSet {
@@ -84,20 +92,45 @@ form button {
 
 article {
     margin: auto;
-    border: 1px solid #D9D9D9;
+    border-color: #677880;
+    border-style: solid;
+    border-width: 4px 1px 1px 1px;
     position: relative;
 }
 
-.topDot {
+.article-title::before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 1px solid #677880;
     position: absolute;
-    top: -16px;
-    left: 48px;
+    top: 4px;
+    left: 0;
+    z-index: -1;
 }
 
-.bottomDot {
+
+article::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 40px;
+    background: #fffaf0 url(./topDot.png) no-repeat center center/ contain;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+
+}
+
+article::after {
+    content: "";
+    background: #fffaf0 url(./bottomDot.png) no-repeat center center/ contain;
+    display: block;
+    width: 80px;
+    height: 40px;
     position: absolute;
     bottom: -16px;
-    right: 48px;
+    right: 30px;
 }
 
 
