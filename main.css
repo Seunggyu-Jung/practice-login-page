@@ -30,55 +30,61 @@
 
 .middle-wrap {
     display: flex;
+    margin: auto;
     gap: 30px;
 }
 
 .line {
     width: 2px;
-    height: 100vh;
+    max-height: calc(100% - 60px);
     border: 1px solid #FF4F6E;
 }
 
-form {
+.form-wrap {
     display: flex;
-    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 456px;
     flex-direction: column;
-    gap:16px;
+
 }
 
-form h2 {
+h2 {
+    width: 100%;
     background: url(./heart.png) no-repeat 0 center / 1em;
     padding-left: 28px;
     margin-top: 62px;
     font-size: 16px;
 }
 
-form input {
+.form-wrap input {
+    width: 100%;
     height: 48px;
     border-bottom: 1px solid #677880;
     border-radius: 4px 4px 0px 0px;
+    margin-top: 24px;
 }
 
-form textarea {
+.form-wrap textarea {
     display: block;
-    width: 456px;
+    width: 100%;
     height: 360px;
     resize: none;
     padding: 16px;
     box-sizing: border-box;
     font-size: 16px;
     font-family: inherit;
+    margin-top: 24px;
 }
 
-form button {
+.form-wrap button {
+    width: 100%;
     background: #29363D;
     text-align: center;
     color: #fff;
     padding: 14px 0;
     border-radius: 4px;
+    margin-top: 24px;
 }
-
-
 
 
 .boxSet {
@@ -87,7 +93,6 @@ form button {
     align-items: center;
     gap: 40px;
     margin: 79px 0 auto auto;
-    /* max-width: 728px; */
 }
 
 article {
@@ -149,6 +154,35 @@ article h3 span {
 article p {
     padding: 12px 48px 28px;
     font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+
+    main {
+        max-width: calc(100% - 60px);
+    }
+
+    .line {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        margin: -1px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+    }
+
+    .middle-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        min-height: auto;
+    }
+
+
+    
 }
 
 

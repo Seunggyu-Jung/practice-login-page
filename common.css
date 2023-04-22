@@ -37,12 +37,13 @@ input {
 }
 
 .top-wrap {
-    max-width: 1440px;
+    width: 1224px;
+    max-width: calc(100% - 60px);
     margin: auto;
 }
 
 main {
-    max-width: 1440px;
+    width: 1224px;
     margin: auto;
 }
 
@@ -55,4 +56,12 @@ height: 1px;
 overflow: hidden;
 padding: 0;
 position: absolute;
+}
+
+@media (max-width: 578px) {
+    .top-banner {
+        position: absolute;
+        top: 100px;
+        right: 34px;
+    }
 }
